@@ -20,7 +20,7 @@ public class TimeIntervalMatcher extends BaseMatcher<LocalDateTime> {
     @Override
     public boolean matches(Object item) {
         JSONArray rawData = (JSONArray) item;
-        if (rawData.size() == 0) {
+        if (rawData.isEmpty()) {
             throw new RuntimeException("No data to parse!");
         }
         for (Object raw : rawData) {
